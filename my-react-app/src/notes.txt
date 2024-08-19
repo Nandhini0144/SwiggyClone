@@ -1,0 +1,47 @@
+array destructuring
+
+// const Counter=()=>{
+//   const [count,setCount]=useState(0);
+//   const incre=()=>{
+//     setCount(count+1)
+//   }
+//   const decre=()=>{
+//     setCount(count-1)
+//   }
+//   return(
+//     <>
+//     <h3>Count:{count}</h3>
+//     <button onClick={incre}>Increment</button>
+//     <button onClick={decre}>Decrement</button>
+//     </>
+//   )
+// }
+
+    {/* <h1>Add component</h1> */}
+    {/* <Body name={name} age={a} /> */}
+    {/* {Body({name:name,age:a})} */}
+
+
+
+
+   
+
+
+
+         {
+              useEffect(()=>{
+                const  d=recommended.filter((res)=>{
+                  // console.log(res.card.info.name)
+                    if(params.id==res.card.info.id)return res.card.info
+                  })
+                 setIdData(d)
+              },[])
+ }
+      </div> */
+      <div className='restaurant-details-container'>
+        {
+            details.map((res) => {
+                // return <ResDetailsCard key={res.id} recommends={res} />
+                return<ResDetailsCard key={res.card.info.id} recommends={res.card.info}/>
+            })
+        }
